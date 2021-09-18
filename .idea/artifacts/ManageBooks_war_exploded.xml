@@ -44,6 +44,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.9" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.9" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.9" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.17" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.5.4" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.5.4" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.22" />

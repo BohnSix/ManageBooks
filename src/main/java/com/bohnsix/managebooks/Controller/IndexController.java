@@ -2,16 +2,29 @@ package com.bohnsix.managebooks.Controller;
 
 
 import com.bohnsix.managebooks.pojo.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpSession;
 
 @Controller
 public class IndexController {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @ResponseBody
+    @GetMapping("/sql")
+    public String queryFromDB() {
+        Long aLong = jdbcTemplate.queryForObject("SELECT count(*) FROM account_tb1", Long.class);
+        return aLong.toString();
+    }
 
     @GetMapping(value={"/", "/login"})
     public String loginPage() {
